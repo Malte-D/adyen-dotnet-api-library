@@ -54,7 +54,10 @@ namespace Adyen.Model.LegalEntityManagement
             /// Enum UboThroughOwnership for value: uboThroughOwnership
             /// </summary>
             [EnumMember(Value = "uboThroughOwnership")]
-            UboThroughOwnership = 3
+            UboThroughOwnership = 3,
+            
+            [EnumMember(Value = "soleProprietorship")]
+            SoleProprietorship = 4
 
         }
 

@@ -40,7 +40,7 @@ namespace Adyen.Service.LegalEntityManagement
         public async Task<OnboardingLink> CreateAsync(string legalEntityId, OnboardingLinkInfo request)
         {
             var jsonRequest = request.ToJson();
-            var resource = new LegalEntityManagementResource(this, "/legalEntities/" + legalEntityId);
+            var resource = new LegalEntityManagementResource(this, "/legalEntities/" + legalEntityId + "/onboardingLinks");
             var jsonResult = await resource.RequestAsync(jsonRequest);
             return JsonConvert.DeserializeObject<OnboardingLink>(jsonResult);
         }
