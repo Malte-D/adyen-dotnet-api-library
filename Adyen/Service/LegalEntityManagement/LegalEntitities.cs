@@ -62,7 +62,7 @@ namespace Adyen.Service.LegalEntityManagement
         
         public async Task<BusinessLines> ListBusinessLinesAsync(string legalEntityId)
         {
-            var resource = new LegalEntityManagementResource(this, "/legalEntities/" + legalEntityId);
+            var resource = new LegalEntityManagementResource(this, "/legalEntities/" + legalEntityId + "/businessLines");
             var jsonResult = await resource.RequestAsync(null, null, HttpMethod.Get);
             return JsonConvert.DeserializeObject<BusinessLines>(jsonResult);
         }
